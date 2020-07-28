@@ -1,6 +1,6 @@
 **基于 MVC 设计模式的 JavaWeb 项目**<br>
 <br>
-**项目名称：商品信息管理系统**<br>
+**项目名称：**商品信息管理系统<br>
 <br>
 **开发环境：**<br>
 JDK 8<br>
@@ -9,7 +9,7 @@ Tomcat 9.0<br>
 IDEA<br>
 layUI模板(前端)<br>
 <br>
-jar包：<br>
+**jar包：**<br>
 servlet-api.jar<br>
 standard.jar<br>
 mysql-connector-java-5.1.49.jar<br>
