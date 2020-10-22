@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="layui/css/layui.css">
 <script type="text/javascript">
 	function initPageSize(pageSize) {
-
 		pageSizeOption = document.getElementById("pageSizeOption");
 		console.log(pageSizeOption);
 		for (i = 0; i < pageSizeOption.options.length; ++i) {
