@@ -89,7 +89,7 @@ public class ProductServlet extends HttpServlet {
 	}
 	protected void findByPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		if(null==session.getAttribute("likeProductKey")) {//�״η���
+		if(null==session.getAttribute("likeProductKey")) {//??η???
 			session.setAttribute("likeProductKey","");
 		}
 		int totalNum = ips.findTotalNum((String)session.getAttribute("likeProductKey"));
@@ -101,12 +101,12 @@ public class ProductServlet extends HttpServlet {
 				(PageUtils<Product>)session.getAttribute("pageBeanProduct");
 		String curPage = request.getParameter("curPage");
 		if(null!=curPage) {
-			//��ҳ
+			//???
 			pageBeanProduct =new PageUtils<Product>(Integer.valueOf(curPage),
 					pageBeanProduct.getPageSize(),totalNum);
 			session.setAttribute("pageBeanProduct", pageBeanProduct);
 		}else {
-			//��Ӻ�ɾ��
+			//???????
 			pageBeanProduct =new PageUtils<Product>(pageBeanProduct.getCurPage(),
 					pageBeanProduct.getPageSize(),totalNum);
 			session.setAttribute("pageBeanProduct", pageBeanProduct);
