@@ -23,7 +23,7 @@ public class ProductDaoImpl implements IProductDao {
 		List<Product> pList = null;
 		try {
 			pList = qr.query(DBUtils.getConnection(), sql,
-					new BeanListHandler<Product>(Product.class));
+					new BeanListHandler<>(Product.class));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -73,7 +73,7 @@ public class ProductDaoImpl implements IProductDao {
 		String sql = "select pid,name,price,store,state from t_product where pid=?";
 		Product p = null;
 		try {
-			p = qr.query(DBUtils.getConnection(), sql, new BeanHandler<Product>(Product.class),id);
+			p = qr.query(DBUtils.getConnection(), sql, new BeanHandler<>(Product.class),id);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
